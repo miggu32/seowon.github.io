@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Resume | Seowon Jeong</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="resume.html">Resume</a>
+  <a href="projects.html">Projects</a>
+</nav>
+
+
+    <div class="hero">
+      <h1>Resume</h1>
+      <a class="btn" href="assets/Seowon-Jeong-Resume.pdf" download>
+        DOWNLOAD RESUME PDF
+      </a>
+
+      <div class="resume-preview">
+        <!-- Option A (simple): show an image preview -->
+        <img src="assets/resume-preview.jpg" alt="Resume preview" />
+      </div>
+
+      <!-- Option B (instead of image): embed the PDF (works in most browsers)
+      <div class="resume-preview">
+        <iframe class="video" src="assets/Seowon-Jeong-Resume.pdf" title="Resume PDF"></iframe>
+      </div>
+      -->
+    </div>
+
+    <footer>
+      <div><a href="index.html">HOME</a></div>
+      <div><a href="https://www.linkedin.com/in/sj320/" target="_blank" rel="noreferrer">LinkedIn</a></div>
+      <div>Email: <a href="mailto:Seowonj320@gmail.com">Seowonj320@gmail.com</a></div>
+      <div style="margin-top:8px;">© 2026 Seowon Jeong</div>
+    </footer>
+
+  </div>
+  <script>
+  const reveals = document.querySelectorAll('.reveal');
+
+  const revealOnScroll = () => {
+    const windowHeight = window.innerHeight;
+    reveals.forEach(el => {
+      const elementTop = el.getBoundingClientRect().top;
+      const revealPoint = 120;
+
+      if (elementTop < windowHeight - revealPoint) {
+        el.classList.add('active');
+      }
+    });
+  };
+
+  window.addEventListener('scroll', revealOnScroll);
+  revealOnScroll(); // trigger on load
+</script>
+
+</body>
+</html>
+

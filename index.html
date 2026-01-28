@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Seowon Jeong | Mechanical Engineering Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+
+    <!-- Navigation -->
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="resume.html">Resume</a>
+      <a href="projects.html">Projects</a>
+    </nav>
+
+    <!-- Hero -->
+    <div class="hero">
+      <div class="two-col">
+        <img class="avatar" src="assets/profile.jpg" alt="Seowon Jeong" />
+        <div>
+          <div class="small">Mechanical Engineering Portfolio</div>
+          <h1>Seowon Jeong</h1>
+          <p>
+            B.S./M.S. Mechanical Engineering (Advanced Design & Manufacturing)  
+            <br />University of Texas at Austin · Class of 2026
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Summary -->
+    <section class="section reveal">
+      <h2>Summary</h2>
+      <p class="small">
+        I am a Mechanical Engineering graduate (B.S., M.S.) from The University of Texas at Austin,
+        specializing in Advanced Design and Manufacturing with a strong focus on product design engineering.
+        My experience spans user-centered product design, CAD and prototyping, and manufacturing optimization,
+        including developing low-cost medical simulators and improving semiconductor yield and production
+        efficiency at Infineon Technologies.
+      </p>
+    </section>
+
+    <!-- Strengths & Focus Areas -->
+    <section class="section reveal">
+      <div class="lists">
+        <div class="card">
+          <h2>Strengths</h2>
+          <ul>
+            <li>User-centered product design mindset</li>
+            <li>CAD → prototype → validation workflows</li>
+            <li>Manufacturability, cost, and efficiency optimization</li>
+            <li>Data-driven decision making (DOE, statistics)</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2>Focus Areas</h2>
+          <ul>
+            <li>Advanced Design & Manufacturing</li>
+            <li>Additive manufacturing and prototyping</li>
+            <li>Manufacturing process optimization</li>
+            <li>Mechanical product design engineering</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section reveal">
+      <h2>Contact</h2>
+      <p class="small">
+        Email:
+        <a href="mailto:Seowonj320@gmail.com">Seowonj320@gmail.com</a>
+        <br />
+        LinkedIn:
+        <a href="https://www.linkedin.com/in/sj320/" target="_blank" rel="noreferrer">
+          linkedin.com/in/sj320
+        </a>
+      </p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div>© 2026 Seowon Jeong</div>
+    </footer>
+
+  </div>
+  <script>
+  const reveals = document.querySelectorAll('.reveal');
+
+  const revealOnScroll = () => {
+    const windowHeight = window.innerHeight;
+    reveals.forEach(el => {
+      const elementTop = el.getBoundingClientRect().top;
+      const revealPoint = 120;
+
+      if (elementTop < windowHeight - revealPoint) {
+        el.classList.add('active');
+      }
+    });
+  };
+
+  window.addEventListener('scroll', revealOnScroll);
+  revealOnScroll(); // trigger on load
+</script>
+
+</body>
+</html>
